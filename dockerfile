@@ -2,7 +2,7 @@ FROM php:8.3-apache
 ENV PORT=8080
 # Configure PHP for Cloud Run.
 # Precompile PHP code with opcache.
-RUN docker-php-ext-install pdo_mysqli
+RUN docker-php-ext-install pdo_mysql
 RUN docker-php-ext-install -j "$(nproc)" opcache
 RUN set -ex; \
   { \
