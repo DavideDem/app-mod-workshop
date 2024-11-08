@@ -1,5 +1,5 @@
 FROM php:8.3-apache
-ENV PORT 8080
+ENV PORT=8080
 # Configure PHP for Cloud Run.
 # Precompile PHP code with opcache.
 RUN docker-php-ext-install mysqli
